@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter 💵 ↔️ 💶
 
 Simple currency converter made in C# and .NET using an API from currencyapi.com. The program allows users to choose from a large list of currencies
 and convert back and forth.
