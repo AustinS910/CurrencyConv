@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CurrencyConverter.MainWindow"
+        Title="CurrencyConverter"
+        Background="SlateGray">
+
+       <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*" >
+
+              <Label Content="From" Target="FromBox" FontSize="30"
+                     VerticalAlignment="Center" Margin="60,5"></Label>
+
+              <Label Content="To" Target="ToBox" FontSize="30"
+                     Grid.Column="1"  VerticalAlignment="Center" Margin="90,5"></Label>
+
+              <ComboBox  Name="FromBox"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="90">
+              </ComboBox>
+
+              <ComboBox  Name="ToBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="90" Grid.Column = "1">
+              </ComboBox>
+
+              <TextBox Name="AmountTxt" Text="Amount" FontSize="30" Grid.Row="1"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">
+              </TextBox>
+
+              <TextBlock Text="Result:" Name="ResultTxt" Grid.Column="1" Background="White"
+                         FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"
+                         Height="60" Width="150" Grid.Row="1" TextAlignment="Center">
+              </TextBlock>
+
+              <Button Content="Calculate"
+                      Grid.Row="2" Click="CalculateClick"
+                      HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Grid.ColumnSpan="20" HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center"
+                      Height="70" Width="200" FontSize="30"
+                      ></Button>
+       </Grid>
+</Window>
